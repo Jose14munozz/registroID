@@ -7,22 +7,29 @@ function validateForm() {
     
     // Expresión regular para validar el formato de email
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Expresión regular para validar el formato del número de teléfono (10 dígitos)
+    var phoneRegex = /^\d{10}$/;
     
-    // Verificar si algún campo está vacío o el formato de email es inválido
-    if (fullname === '' || email === '' || phone === '') {
-      // Mostrar un mensaje de alerta si algún campo está vacío
-      alert('Por favor, complete todos los campos.');
-      return false; // Evitar el envío del formulario
-    } else if (!emailRegex.test(email)) {
-      // Mostrar un mensaje de alerta si el formato de email es inválido
-      alert('Por favor, ingrese un correo electrónico válido.');
-      return false; // Evitar el envío del formulario
-    } else {
-      // Mostrar los detalles de la compra si los datos del formulario son válidos
-      showPurchaseDetails();
-      return false; // Evitar el envío del formulario real
-    }
+   // Verificar si algún campo está vacío, el formato de email es inválido, el número de teléfono es inválido o no se ha seleccionado el tipo de entrada
+   if (fullname === '' || email === '' || phone === '' || ticket === 'Seleccionar') {
+    // Mostrar un mensaje de alerta si algún campo está vacío o no válido
+    alert('Por favor, complete todos los campos correctamente.');
+    return false; // Evitar el envío del formulario
+  } else if (!emailRegex.test(email)) {
+    // Mostrar un mensaje de alerta si el formato de email es inválido
+    alert('Por favor, ingrese un correo electrónico válido.');
+    return false; // Evitar el envío del formulario
+  } else if (!phoneRegex.test(phone)) {
+    // Mostrar un mensaje de alerta si el formato del número de teléfono es inválido
+    alert('Por favor, ingrese un número de teléfono válido (10 dígitos).');
+    return false; // Evitar el envío del formulario
+  } else {
+    // Mostrar los detalles de la compra si los datos del formulario son válidos
+    showPurchaseDetails();
+    return false; // Evitar el envío del formulario real
   }
+}
   
   // Función para mostrar los detalles de la compra
   function showPurchaseDetails() {
