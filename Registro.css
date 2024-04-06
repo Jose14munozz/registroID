@@ -1,0 +1,91 @@
+/* Estilos para el cuerpo de la página */
+body {
+    background-color: blanchedalmond; /* Color de fondo del cuerpo */
+    font-family: Arial, sans-serif; /* Fuente principal */
+}
+
+/* Estilos para los encabezados h2 */
+h2 {
+    text-align: center; /* Alineación centrada del texto */
+}
+
+/* Contenedor principal */
+.container {
+    display: grid; /* Utilizar un layout de cuadrícula */
+    grid-template-columns: 1fr; /* Columna única para dispositivos móviles */
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+    padding: 20px; /* Espaciado interno */
+    max-width: 100%; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+}
+
+/* Estilos para la sección de detalles del evento */
+.event-details {
+    padding: 40px; /* Espaciado interno */
+    border-radius: 10px; /* Borde redondeado */
+    font-weight: 800; /* Grosor de la fuente */
+    background-image:linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), /* Degradado transparente */
+                      url("https://images.universal-music.de/img/assets/555/555757/4/720/imagine-dragons.jpg"); /* URL de la imagen de fondo */
+    background-position: center; /* Centrar la imagen de fondo */
+}
+
+/* Estilos para el formulario de registro */
+.registration-form {
+    padding: 60px; /* Espaciado interno */
+    border-radius: 10px; /* Borde redondeado */
+    font-weight: 800; /* Grosor de la fuente */
+    background-image:linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), /* Degradado transparente */
+                      url("https://th.bing.com/th/id/OIP.lGjXiw2qCtm_E-cwKldGjAHaHa?rs=1&pid=ImgDetMain"); /* URL de la imagen de fondo */
+    background-position: center; /* Centrar la imagen de fondo */
+}
+
+/* Estilos para la sección de detalles de la compra */
+.purchase-details {
+    padding: 90px; /* Espaciado interno */
+    border-radius: 10px; /* Borde redondeado */
+    font-weight: 800; /* Grosor de la fuente */
+    background-image:linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), /* Degradado transparente */
+                      url("https://th.bing.com/th/id/OIP.2ONRUTabm50qtHK5pA88WQHaHa?w=600&h=600&rs=1&pid=ImgDetMain"); /* URL de la imagen de fondo */
+    background-position: center; /* Centrar la imagen de fondo */
+}
+
+/* Estilos para las etiquetas del formulario de registro */
+.registration-form label {
+    display: block; /* Mostrar como bloque para separar verticalmente */
+    margin-bottom: 5px; /* Espacio inferior */
+}
+
+/* Estilos para los campos de entrada y selección del formulario de registro */
+.registration-form input,
+.registration-form select {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espacio inferior */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+/* Estilos para el botón de enviar del formulario de registro */
+.registration-form button {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    background-color: #ab9680; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cursor al pasar sobre el botón */
+    opacity: 0.8; /* Opacidad del botón */
+}
+
+/* Estilos para el botón de enviar al pasar el cursor sobre él */
+.registration-form button:hover {
+    background-color: #c7b69f; /* Cambio de color de fondo */
+    opacity: 0.6; /* Cambio de opacidad */
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas de tamaño variable */
+    }
+}
